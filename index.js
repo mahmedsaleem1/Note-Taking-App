@@ -46,6 +46,18 @@ app.post("/create", (req, res) => {
     })
 })
 
+app.get("/update/:pevious_filename", (req, res) => {
+    res.render("edit", { title: req.params.pevious_filename })
+})
+
+app.post("/edit", (req, res) => {
+    fs.rename(`./notes/${req.body.previousfilename}`, `./notes/${req.body.newfilename.split(' ').join('')}.txt`, (error) => {
+        if (error) 
+            console.log(error)
+    })
+    res.redirect(path.join("/notes/" + req.body.newfilename.split(' ').join('') + ".txt"))
+})
+
 app.listen(3000, () => {
     console.log('Server is running on port 3000')
 })
