@@ -1,0 +1,27 @@
+{
+  "name": "note_taker",
+  "version": "1.0.0",
+  "description": "A basic Note Taking App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mahmedsaleem1/Note-Taking-App"
+  },
+  "keywords": [
+    "Note",
+    "Taker"
+  ],
+  "author": "Ahmed Saleem",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
